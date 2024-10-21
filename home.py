@@ -72,7 +72,7 @@ if st.session_state.data:
         vehicles = []
         for value in selected_values["selection"]["rows"]:
             vehicle = st.session_state.data[value]
-            vehicles
+            vehicles.append(vehicle["VIN"])
             with st.expander(
                 f"{vehicle["Make"]} {vehicle["Model"]} {vehicle["VIN"]} {vehicle["SaleDate"]}"
             ):
@@ -97,6 +97,7 @@ if st.session_state.data:
                         sale_date = st.date_input(
                             "Sale Date",
                             value=datetime.strptime(vehicle["SaleDate"], "%d/%m/%Y"),
+                            key=f"edit_{vehicle["VIN"]}_date",
                         )
                 with col2:
                     with st.popover("Delete", use_container_width=True):
