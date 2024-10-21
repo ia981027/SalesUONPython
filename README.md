@@ -12,3 +12,6 @@ source venv/bin/activate # use Scripts/activate for Windows, use activate.fish f
 pip install -r requirements.txt
 streamlit run home.py
 ```
+
+## Pictures
+Screenshots exist in https://github.com/ia981027/SalesUONPython/tree/main/screenshots
